@@ -1,8 +1,8 @@
-# Multi Processing Scraping (Acceleration)
+# Multi Treading Scraping
 
 import multiprocessing as mp
 import time
-from urllib.request import urlopen, urljoin
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
 
@@ -49,7 +49,7 @@ def parse(html):
     return title, url, sub_urls
 
 
-def scrape_simple(max_crawl=30):
+def scrape_multi_thread(max_crawl=30):
     """ Scraping the YouTube website from 《奔跑吧兄弟1》第1期
 
     Args:
@@ -68,16 +68,19 @@ def scrape_simple(max_crawl=30):
 
     # Start scraping
     count = 1
+    pool = mp.Pool(4)
     while len(not_visited) != 0:
         # Stop crawling if reach maximum
         if count >= max_crawl:
             break
 
-        print('\n==> Simple Crawling...')
-        htmls = [crawl(url) for url in not_visited]
+        print('\n==> Parallel Crawling...')
+        crawl_jobs = [pool.apply_async(crawl, (url, )) for url in not_visited]
+        htmls = [job.get() for job in crawl_jobs]
 
-        print('\n==> Simple Parsing...')
-        results = [parse(html) for html in htmls]
+        print('\n==> Parallel Parsing...')
+        parse_jobs = [pool.apply_async(parse, (html, )) for html in htmls]
+        results = [job.get() for job in parse_jobs]
 
         print('\n==> Simple Analysing...')
         visited.update(not_visited)
@@ -91,7 +94,7 @@ def scrape_simple(max_crawl=30):
 
 if __name__ == '__main__':
     start = time.time()
-    scrape_simple()
+    scrape_multi_thread()
     end = time.time()
-    simple_time = end-start
-    print('Simple scraping:', simple_time)
+    elapsed_time = end-start
+    print('Total Time:', elapsed_time)
