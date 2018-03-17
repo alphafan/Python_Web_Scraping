@@ -15,6 +15,9 @@ soup = BeautifulSoup(html, features='lxml')
 print('\nh1:', soup.h1)
 print('\np:', soup.p)
 
+# To get text only
+print('\nh1 text:', soup.h1.get_text())
+
 # To access all tag content
 all_link = soup.find_all('a')
 print('\nLinks:', all_link)

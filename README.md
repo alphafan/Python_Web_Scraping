@@ -1,3 +1,3 @@
 # Python Scrape Examples
 
-[BeautifulSoup Examples](beautiful_soup)
+- [BeautifulSoup Examples](beautiful_soup)
