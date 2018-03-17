@@ -10,11 +10,16 @@ import requests
 img_width = 640
 img_height = 480
 img_url = 'http://lorempixel.com/{}/{}/'.format(img_width, img_height)
+```
+### Method 1: Download with url retrieve
 
-# Method 1: Download with url retrieve
+```python
 urlretrieve(img_url, 'img_1.png')
+```
 
-# Method 2: Use requests
+### Method 2: Use requests
+
+```python
 r = requests.get(img_url)
 with open('img_2.png', 'wb') as f:
     f.write(r.content)
