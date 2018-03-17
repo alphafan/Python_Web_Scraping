@@ -33,9 +33,9 @@ def main():
 
     # asyncio
     start = time.time()
-    event_loop = asyncio.get_event_loop()
-    event_loop.run_until_complete(async_execute_jobs(event_loop))
-    event_loop.close()
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(async_execute_jobs(loop))
+    loop.close()
     end = time.time()
     total_time = end - start
     print('\nAsyncio Time:', total_time, '\n')
