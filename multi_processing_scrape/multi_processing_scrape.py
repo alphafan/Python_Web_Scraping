@@ -67,7 +67,7 @@ def scrape_simple(max_crawl=30):
     visited = set()
 
     # Start scraping
-    count, start = 1, time.time()
+    count = 1
     while len(not_visited) != 0:
         # Stop crawling if reach maximum
         if count >= max_crawl:
@@ -88,9 +88,10 @@ def scrape_simple(max_crawl=30):
             count += 1
             not_visited.update(sub_urls - visited)
 
-    end = time.time()
-    print('Total Time:', end-start)
-
 
 if __name__ == '__main__':
+    start = time.time()
     scrape_simple()
+    end = time.time()
+    simple_time = end-start
+    print('Simple scraping:', simple_time)
