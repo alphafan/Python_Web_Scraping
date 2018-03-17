@@ -5,7 +5,8 @@
 
 ## Python Scrape Examples
 
-- [Scrape Baidu Baike](scrape_baidu_baike)
+- [Scrape Titles of Baidu Baike](scrape_baidu_baike)
+- [Scrape Images of National Geographic](scrape_national_geographic)
 
 ## Url Encode Decode Utils
 https://www.url-encode-decode.com/
