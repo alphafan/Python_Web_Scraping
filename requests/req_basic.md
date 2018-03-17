@@ -28,5 +28,16 @@ data = {'firstname': 'Yufan', 'lastname': 'Zheng'}
 
 r = requests.post(url, data)
 print(r.text)
+```
 
+### Upload Request
+
+```python
+# Upload Requests
+
+import requests
+
+file = {'uploadFile': open('README.md', 'rb')}
+resp = requests.post('http://pythonscraping.com/files/processing2.php', file)
+print(resp.text)
 ```
