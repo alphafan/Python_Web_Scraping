@@ -25,7 +25,7 @@ with open('img_2.png', 'wb') as f:
     f.write(r.content)
 ```
 
-### Method 3: Download chunk by chunk
+### Method 3: Download chunk by chunk (More efficient)
 
 ```python
 r = requests.get(img_url, stream=True)
