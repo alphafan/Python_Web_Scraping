@@ -1,5 +1,6 @@
-# Beautiful Soup Extract By CSS Class
+## Beautiful Soup Extract By CSS Class
 
+```python
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
@@ -10,3 +11,4 @@ soup = BeautifulSoup(html, features='lxml')
 images = soup.find_all('img', {'class': 'full-size'})
 for image in images:
     print(image)
+```
