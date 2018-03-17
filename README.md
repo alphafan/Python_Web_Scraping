@@ -2,6 +2,7 @@
 
 - [BeautifulSoup Tutorials](beautiful_soup)
 - [Python Request Tutorials](requests)
+- [Multi Threading Scraping Tutorials](multi_thread_scrape)
 
 ## Python Scrape Examples
 
