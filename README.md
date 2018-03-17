@@ -1,8 +1,8 @@
 ## Python Scrape Tutorials
 
-- [BeautifulSoup Tutorials](beautiful_soup)
-- [Python Request Tutorials](requests)
-- [Multi Threading Scraping Tutorials](multi_thread_scrape)
+- [BeautifulSoup Tutorials](tuto_beautiful_soup)
+- [Python Request Tutorials](tuto_requests)
+- [Multi Threading Scraping Tutorials](tuto_multi_thread_scrape)
 
 ## Python Scrape Examples
 
