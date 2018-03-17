@@ -52,10 +52,7 @@ def scrape_simple(max_crawl=30):
     """ Scraping the YouTube website from 《奔跑吧兄弟1》第1期
 
     Args:
-        max_crawl:
-
-    Returns:
-
+        max_crawl: Maximum crawl page number
     """
     # Start From this page to scraping data
     # 《奔跑吧兄弟1》第1期 完整版：邓超李晨PK战神金钟国 RunningManS1 20141010 【浙江卫视官方超清1080P】
