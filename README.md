@@ -1,6 +1,7 @@
 ## Python Scrape Tutorials
 
 - [BeautifulSoup Tutorials](beautiful_soup)
+- [Python Request Tutorials](requests)
 
 ## Python Scrape Examples
 
