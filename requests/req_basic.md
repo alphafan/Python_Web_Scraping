@@ -1,5 +1,7 @@
 ## Python Requests Basic Usage
 
+### Get
+
 ```python
 # Get Request
 
@@ -13,6 +15,8 @@ req = requests.get(url, params)
 print(req.url)
 webbrowser.open(req.url)
 ```
+
+### POST
 
 ```python
 # Post Request
