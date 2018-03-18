@@ -1,6 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome()     # 打开 Chrome 浏览器
+# define headless
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+
+driver = webdriver.Chrome(chrome_options=chrome_options)
 
 # 将刚刚复制的帖在这
 driver.get("https://morvanzhou.github.io/")
