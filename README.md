@@ -4,6 +4,7 @@
 - [Python Request Tutorials](tuto_requests)
 - [Multi Threading Scraping Tutorials](tuto_multi_thread_scrape)
 - [Asyncio Scraping Tutorials](tuto_asyncio_scrape)
+- [Simple Scrapy Example](tuto_scrapy)
 
 ## Python Scrape Examples
 
